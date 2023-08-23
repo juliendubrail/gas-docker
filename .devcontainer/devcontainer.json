@@ -1,0 +1,13 @@
+{
+    "name": "gas-dev",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": [
+                "MichaelCurrin.auto-commit-msg"
+            ]
+        }
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y git && read -p 'Enter your git username: ' git_username && read -p 'Enter your git email: ' git_email && git config --global user.name $git_username && git config --global user.email $git_email; npm install -g @google/clasp; npm i -S @types/google-apps-script"
+}
