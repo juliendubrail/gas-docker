@@ -21,11 +21,7 @@ function DOUBLE(input) {
  */
 function getMonth(input) {
     return Array.isArray(input) ?
-        input.map(row => row.map(cell => {
-            let formattedDate = new Date(cell)
-            let month = formattedDate.getMonth() + 1;
-            return month;
-        })) : singleMonth(input)
+        input.map(row => row.map(cell => singleMonth(cell))) : singleMonth(input)
 }
 
 function singleMonth(input) {
